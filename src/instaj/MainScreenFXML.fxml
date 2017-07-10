@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="instaj.MainScreenFXMLController">
+    <children>
+        <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Inicio">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <HBox maxHeight="120.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #d3d3d3;">
+                                    <children>
+                                        <ImageView fx:id="profilePicture" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+                                        <VBox alignment="CENTER_LEFT" prefHeight="103.0" prefWidth="210.0">
+                                            <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="\@" />
+                                                        <Label fx:id="username" text="placeholder" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="Siguiendo:" />
+                                                        <Label fx:id="currentFollowing" text="Label">
+                                                            <padding>
+                                                                <Insets left="5.0" />
+                                                            </padding>
+                                                        </Label>
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="Seguidores:" />
+                                                        <Label fx:id="currentFollowers" text="Label">
+                                                            <HBox.margin>
+                                                                <Insets left="5.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" top="90.0" />
+                                    </GridPane.margin>
+                                </HBox>
+                                <VBox prefHeight="200.0" prefWidth="340.0" style="-fx-border-color: #d3d3d3;" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="Ultima Interacción:">
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" top="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="338.0">
+                                            <children>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="239.0" spacing="15.0">
+                                                    <children>
+                                                        <Label text="Acción:" />
+                                                        <Label text="Usuario: " />
+                                                        <Label />
+                                                    </children>
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <padding>
+                                                        <Insets left="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                                <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" />
+                                            </children>
+                                            <padding>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" top="5.0" />
+                                    </GridPane.margin>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label text="Log:">
+                                            <padding>
+                                                <Insets bottom="2.0" left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextArea fx:id="logbox" editable="false" minHeight="100.0" prefHeight="91.0" prefWidth="685.0" />
+                                    </children>
+                                </VBox>
+                                <Button fx:id="startBtn" minHeight="35.0" mnemonicParsing="false" onAction="#startBtnBehavior" prefHeight="35.0" text="Iniciar Bot" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets left="180.0" />
+                                    </GridPane.margin>
+                                </Button>
+                                <Button fx:id="stopBtn" minHeight="35.0" mnemonicParsing="false" prefHeight="35.0" text="Detener Bot" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets left="260.0" />
+                                    </GridPane.margin>
+                                </Button>
+                                <VBox prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: #d3d3d3;" GridPane.columnIndex="1" GridPane.rowSpan="2">
+                                    <children>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label text="Número de likes:">
+                                                    <HBox.margin>
+                                                        <Insets right="180.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="numberOfLikes" prefHeight="25.0" prefWidth="61.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="119.0" text="Tiempo entre likes:">
+                                                    <HBox.margin>
+                                                        <Insets right="152.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="timeBetweenLikes" disable="true" prefHeight="25.0" prefWidth="61.0" promptText="Minutos" />
+                                            </children>
+                                        </HBox>
+                                        <Separator prefWidth="200.0" />
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label text="Número de follows:">
+                                                    <HBox.margin>
+                                                        <Insets right="167.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField prefHeight="25.0" prefWidth="61.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="135.0" text="Tiempo entre follows:">
+                                                    <HBox.margin>
+                                                        <Insets right="137.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField disable="true" prefHeight="25.0" prefWidth="61.0" promptText="Minutos" />
+                                            </children>
+                                        </HBox>
+                                        <Separator prefWidth="200.0" />
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="124.0" text="Número de unfollows:">
+                                                    <HBox.margin>
+                                                        <Insets right="155.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField prefHeight="25.0" prefWidth="61.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="147.0" text="Tiempo entre unfollows:">
+                                                    <HBox.margin>
+                                                        <Insets right="130.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField disable="true" prefHeight="25.0" prefWidth="61.0" promptText="Minutos" />
+                                            </children>
+                                        </HBox>
+                                        <Separator prefWidth="200.0" />
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="137.0" text="Número de comentarios:">
+                                                    <HBox.margin>
+                                                        <Insets right="140.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField prefHeight="25.0" prefWidth="61.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="17.0" prefWidth="162.0" text="Tiempo entre comentarios:">
+                                                    <HBox.margin>
+                                                        <Insets right="115.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField disable="true" prefHeight="25.0" prefWidth="61.0" promptText="Minutos" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <GridPane.margin>
+                                        <Insets right="6.0" top="5.0" />
+                                    </GridPane.margin>
+                                </VBox>
+                                <ImageView fx:id="instaj" fitHeight="79.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="img/InstaJ.png" />
+                                    </image>
+                                    <GridPane.margin>
+                                        <Insets bottom="120.0" left="100.0" />
+                                    </GridPane.margin>
+                                </ImageView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab text="Configuración">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #d3d3d3;">
+                                    <children>
+                                        <Label text="Lista de tags:">
+                                            <padding>
+                                                <Insets bottom="10.0" left="5.0" top="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextArea fx:id="tagsList" maxHeight="100.0" maxWidth="300.0" prefHeight="132.0" prefWidth="200.0" promptText="Separar los tags con comas.">
+                                            <VBox.margin>
+                                                <Insets left="5.0" />
+                                            </VBox.margin>
+                                        </TextArea>
+                                    </children>
+                                    <GridPane.margin>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </GridPane.margin>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #d3d3d3;" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </GridPane.margin>
+                                    <children>
+                                        <Label text="Follows:">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <CheckBox mnemonicParsing="false" selected="true" text="Guardar lista de follows">
+                                            <VBox.margin>
+                                                <Insets left="10.0" />
+                                            </VBox.margin>
+                                        </CheckBox>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #d3d3d3;" GridPane.columnIndex="1">
+                                    <children>
+                                        <Label text="Lista de comentarios:">
+                                            <padding>
+                                                <Insets bottom="10.0" left="5.0" top="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextArea maxHeight="100.0" maxWidth="300.0" prefHeight="132.0" prefWidth="200.0" promptText="Separar los comentarios con comas.">
+                                            <VBox.margin>
+                                                <Insets left="5.0" />
+                                            </VBox.margin>
+                                        </TextArea>
+                                    </children>
+                                    <GridPane.margin>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </GridPane.margin>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #d3d3d3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="Unfollows:">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <CheckBox mnemonicParsing="false" text="No dar unfollow si el usuario te sigue">
+                                            <VBox.margin>
+                                                <Insets left="10.0" />
+                                            </VBox.margin>
+                                        </CheckBox>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <Label text="Unfollow despues de ">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="20.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField prefHeight="25.0" prefWidth="42.0">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" top="16.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                                <Label text="dias">
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" top="20.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <GridPane.margin>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </GridPane.margin>
+                                </VBox>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</Pane>
